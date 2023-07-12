@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import {useState} from 'react'
 import './App.css';
 
 function App() {
+  const[name,setName]= useState("dummyUser");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>User: {name}</h1>
+      <div className = "chat-container">
+        <div className='container me'>
+          <p className="chatbox">
+           <strong>name: </strong>
+           <span>Chat message</span>
+           </p>
+        </div>
+        <div className='container'>
+          <p className="chatbox">
+           <strong>name: </strong>
+           <span>Chat message</span> 
+           </p>
+        </div>
+
+      </div>
+      <div class='btm'>
+        <input type="text" placeholder='enter your chat'>
+
+        </input>
+        <button>send</button>
+      </div>
     </div>
   );
 }
